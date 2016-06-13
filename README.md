@@ -460,7 +460,7 @@ var config = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new ProgressPlugin(function(percentage, msg) {
+    new webpack.ProgressPlugin(function(percentage, msg) {
       console.log((percentage * 100) + '%', msg);
     }),
     new ExtractTextPlugin('[name].css')
