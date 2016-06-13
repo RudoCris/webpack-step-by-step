@@ -15,10 +15,10 @@ if (__DEVELOPMENT__) {
     noInfo: true,
     publicPath: config.output.publicPath
   }));
-  app.use(require('webpack-hot-middleware')(compiler));
 } else {
   var config = require('./webpack.prod.config');
   var compiler = webpack(config);
+  app.use(require('webpack-hot-middleware')(compiler));
 }
 
 
